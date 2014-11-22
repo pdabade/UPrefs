@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UPrefs</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="timezone">Timezone</string>
+    <string name="title_activity_preferences">Your Preferences</string>
+    <string name="register">Register</string>
+    <string name="title_activity_register">Register User</string>
+    <string name="name">Full Name</string>
+    <string name="email">E-mail</string>
+    <string name="enterprise">Enterprise</string>
+    <string name="communication">Communication</string>
+    <string name="change">Change</string>
+    <string name="save">Save</string>
+
+    <string-array name="timezone_list">
+        <item>(UTC-12:00) International Date Line West </item>
+        <item>(UTC-11:00) Coordinated Universal Time-11 </item>
+    </string-array>
+    <string-array name="communication_list">
+        <item>E-mail</item>
+    </string-array>
+
+    <string name="title_activity_set_prefs">Set Your Preferences</string>
+    <string name="preferences">Preferences</string>
+    <string name="title_activity_logout">LogoutActivity</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="mail_sent">E-mail Sent!</string>
+
+</resources>

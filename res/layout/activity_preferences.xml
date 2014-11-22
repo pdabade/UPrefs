@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ibm.uprefs.PreferencesActivity" >
+
+    <TextView
+        android:id="@+id/timezone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/timezone" />
+
+    <TextView
+        android:id="@+id/communication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timezone"
+        android:layout_marginTop="17dp"
+        android:text="@string/communication" />
+
+    <TextView
+        android:id="@+id/txtCommunication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/change_button"
+        android:layout_alignTop="@+id/communication"
+        android:layout_marginLeft="25dp"
+        android:text="@string/communication"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/change_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCommunication"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/communication"
+        android:enabled="true"
+        android:text="@string/change" />
+
+    <TextView
+        android:id="@+id/txtTimezone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timezone"
+        android:layout_alignBottom="@+id/timezone"
+        android:layout_alignLeft="@+id/txtCommunication"
+        android:text="@string/timezone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+</RelativeLayout>
