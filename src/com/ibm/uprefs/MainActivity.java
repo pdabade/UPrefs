@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
 								{
 									//Toast.makeText(getApplicationContext(), "Welcome...",Toast.LENGTH_SHORT).show();
 									uprefApplication.user = objects.get(0);
+									System.out.println(objects.get(0).getClass());
 									Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
 									startActivity(intent);
 									finish();

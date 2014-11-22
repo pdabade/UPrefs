@@ -27,6 +27,7 @@ public final class UPrefsApplication extends Application {
 	
 	User user = null;
 	List<Preferences> prefs= null;
+	List<Office_Locations> office_locations = null;
 	
 	public UPrefsApplication()
 	{
@@ -106,6 +107,9 @@ public final class UPrefsApplication extends Application {
 	}
 	public List<Preferences> getPreferences() {
 		return prefs;
+	}
+	public List<Office_Locations> getOffice_Locations() {
+		return office_locations;
 	}
 
 }

@@ -31,5 +31,7 @@
     <string name="logout">Logout</string>
     <string name="home">Home</string>
     <string name="mail_sent">E-mail Sent!</string>
+    <string name="location">Location</string>
+    <string-array name="location_list"></string-array>
 
 </resources>

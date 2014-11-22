@@ -8,42 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ibm.uprefs.SetPrefsActivity" >
 
-    <Spinner
-        android:id="@+id/timezone_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="16dp"
-        android:entries="@array/timezone_list" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timezone_spinner"
-        android:layout_marginTop="17dp"
-        android:text="@string/communication" />
-
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/communication_spinner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:enabled="true"
-        android:text="@string/save" />
-
-    <Spinner
-        android:id="@+id/communication_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"        
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="16dp"
-        android:entries="@array/communication_list" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -53,13 +17,67 @@
         android:text="@string/preferences"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Spinner
+        android:id="@+id/timezone_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:entries="@array/timezone_list" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timezone_spinner"
+        android:layout_marginLeft="18dp"
+        android:text="@string/communication" />
+
+    <Spinner
+        android:id="@+id/communication_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:entries="@array/communication_list" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
         android:text="@string/timezone" />
+
+    <Spinner
+        android:id="@+id/location_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/communication_spinner"
+        android:layout_below="@+id/textView4" 
+        android:entries="@array/location_list" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/location_spinner"
+        android:layout_below="@+id/communication_spinner"
+        android:layout_marginTop="16dp"
+        android:text="@string/location" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_spinner"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:enabled="true"
+        android:text="@string/save" />
 
 </RelativeLayout>

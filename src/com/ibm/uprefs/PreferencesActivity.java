@@ -51,30 +51,74 @@ public class PreferencesActivity extends Activity {
 					}							
 					// If the result succeeds,
 					else {
-						if(objects.size()==2)
+						if(objects.size()==3)
 						{
 							System.out.println("Preferences  set");
-							System.out.println(objects.get(0).getPreference());
-							System.out.println(objects.get(1).getPreference());
+							uprefApplication.prefs = objects;
+							System.out.println(uprefApplication.prefs.get(0).getPreference());
+							System.out.println(uprefApplication.prefs.get(0).getPreference());
 							if(objects.get(0).getPreference().equalsIgnoreCase("Timezone"))
 							{
 								System.out.println("0 is timezone");
 								TextView txtTZ = (TextView) findViewById(R.id.txtTimezone);
 								txtTZ.setText(objects.get(0).getValue());
-								TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
-								txtCM.setText(objects.get(1).getValue());
+								if(objects.get(1).getPreference().equalsIgnoreCase("Communication"))
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(1).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(2).getValue());
+								}
+								else
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(2).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(1).getValue());
+								}
+								
+							}
+							else if(objects.get(1).getPreference().equalsIgnoreCase("Timezone"))
+							{
+								TextView txtTZ = (TextView) findViewById(R.id.txtTimezone);
+								txtTZ.setText(objects.get(1).getValue());
+								if(objects.get(0).getPreference().equalsIgnoreCase("Communication"))
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(0).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(2).getValue());
+								}
+								else
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(2).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(0).getValue());
+								}
 							}
 							else
 							{
-								System.out.println("0 is communication");
 								TextView txtTZ = (TextView) findViewById(R.id.txtTimezone);
-								txtTZ.setText(objects.get(1).getValue());
-								TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
-								txtCM.setText(objects.get(0).getValue());
+								txtTZ.setText(objects.get(2).getValue());
+								if(objects.get(0).getPreference().equalsIgnoreCase("Communication"))
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(0).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(1).getValue());
+								}
+								else
+								{
+									TextView txtCM = (TextView) findViewById(R.id.txtCommunication);
+									txtCM.setText(objects.get(1).getValue());
+									TextView txtLOC = (TextView) findViewById(R.id.txtLocation);
+									txtLOC.setText(objects.get(0).getValue());
+								}
 							}
 							
 							Button change_button = (Button) findViewById(R.id.change_button);
-							uprefApplication.prefs = objects;
+							
 							change_button.setOnClickListener(new View.OnClickListener(){
 
 								@Override

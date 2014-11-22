@@ -18,14 +18,6 @@
         android:text="@string/timezone" />
 
     <TextView
-        android:id="@+id/communication"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timezone"
-        android:layout_marginTop="17dp"
-        android:text="@string/communication" />
-
-    <TextView
         android:id="@+id/txtCommunication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,6 +45,33 @@
         android:layout_alignBottom="@+id/timezone"
         android:layout_alignLeft="@+id/txtCommunication"
         android:text="@string/timezone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/communication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/location"
+        android:layout_below="@+id/location"
+        android:layout_marginTop="30dp"
+        android:text="@string/communication" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timezone"
+        android:layout_below="@+id/txtTimezone"
+        android:layout_marginTop="26dp"
+        android:text="@string/location" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCommunication"
+        android:layout_alignTop="@+id/location"
+        android:text="@string/location"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
 </RelativeLayout>
